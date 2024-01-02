@@ -1,0 +1,155 @@
+header {
+    display: flex;
+    font-size: 35px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    p {
+        margin: 0px 0px 0px 5px;
+        font-family: 'EB Garamond', serif;
+    }
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+}
+
+header button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+main img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+:root {
+    --bg-color: #75bd6e;
+    --txt-color: #fff;
+    --form-color: #4e9952;
+    --button-color: #e7f4be;
+    --txt-button-color: #4e9952;
+    --shadow: #244727;
+}
+
+.darkmode {
+    --bg-color: #263c84;
+    --form-color: #24226f;
+    --button-color: #b3c8d4;
+    --txt-button-color: #263c84;
+    --shadow: #000116;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    font-family: 'Rethink Sans', sans-serif;
+    font-size: 20px;
+    transition: background-color 0.5s ease;
+}
+
+main h1 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+
+footer {
+    font-size: 14px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+section p {
+    margin-bottom: 2em;
+}
+
+form {
+    background-color: var(--form-color);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    p {
+        margin-top: 0px;
+    }
+    label {
+        margin-bottom: 5px;
+    }
+    input {
+        height: 2em;
+        border: none;
+        border-radius: 5px;
+    }
+    textarea {
+        resize: none;
+        border-radius: 5px;
+    }
+}
+
+form button {
+    font-size: 1em;
+    font-family: 'Rethink Sans', sans-serif;
+    padding-block: 20px;
+    padding-inline: 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--button-color);
+    color: var(--txt-button-color);
+    transition: box-shadow 0.3s;
+}
+
+form button:hover {
+    box-shadow: 0 5px 10px var(--shadow);
+}
+
+@media (min-width: 700px) {
+    body {
+        padding: 20px;
+    }
+}
+
+@media (min-width: 900px) {
+    section {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #content {
+        flex: 1;
+        margin: 10px;
+        padding: 10px;
+    }
+    #form {
+        flex: 1;
+        margin: 10px;
+        padding: 10px;
+    }
+    main h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (min-width: 1200px) {
+    #content {
+        padding: 0px 50px;
+    }
+    #form {
+        padding: 0px 50px;
+    }
+}
